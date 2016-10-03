@@ -15,4 +15,6 @@ class telefone extends Model
 		'prefixo',
 		'sufixo'
 	];
+
+
 }

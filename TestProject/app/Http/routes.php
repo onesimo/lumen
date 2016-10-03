@@ -15,5 +15,12 @@ $app->get('/', function () use ($app) {
     return 'hello world';
 });*/
 
+$app->get('/',[
+	'as' =>'agenda.index',
+	'uses' => 'AgendaController@index'
+]);
 
-$app->get('/',['as' =>'agenda.index','uses' => 'IndexController@index']);
+$app->get('/{letra}',[
+	'as' =>'agenda.letra',
+	'uses' => 'AgendaController@index'
+]);

@@ -3,7 +3,7 @@
     <h3 class="panel-title">{{ $pessoa->apelido }}</h3>
   </div>
   <div class="panel-body">
-    <h1>{{$pessoa->nome}}</h1>
+    <h3>{{$pessoa->nome}}</h3>
     <table class="table table->hover">
     	@foreach ($pessoa->telefones as $telefone)
     		<tr>
