@@ -18,4 +18,5 @@ class Pessoa extends Model
 	{
 		return $this->hasMany(Telefone::class);
 	}
+
 }
