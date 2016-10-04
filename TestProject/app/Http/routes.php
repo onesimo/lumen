@@ -14,6 +14,11 @@
 $app->get('/', function () use ($app) {
     return 'hello world';
 });*/
+/*
+$app->get('/contato/novo',[
+	'as' =>'pessoa.create',
+	'uses' => 'PessoaController@create'
+]);*/
 
 $app->get('/',[
 	'as' =>'agenda.index',

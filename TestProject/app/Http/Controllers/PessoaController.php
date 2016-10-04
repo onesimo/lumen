@@ -6,6 +6,11 @@ use App\Entities\Pessoa;
 
 class PessoaController extends Controller
 {	
+	public function create()
+	{
+		return view('pessoa.create');
+	}
+	
 	public function delete($id)
 	{
 		$pessoa = Pessoa::find($id);

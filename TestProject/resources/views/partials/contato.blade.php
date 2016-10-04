@@ -1,22 +1,38 @@
-<div class="panel @if($pessoa->sexo == 'F') panel-danger @else panel-info @endif">
-  <div class="panel-heading">
-    <h3 class="panel-title">
-    @if($pessoa->sexo == 'F')
-      <i class ="glyphicon glyphicon-cloud"></i>
-    @else
-      <i class="glyphicon glyphicon-asterisk"></i> 
-    @endif
-    {{ $pessoa->apelido }}
-    <span class="pull-right">
-      <a href="#" class="btn btn-success btn-xs"
-      data-toggle="tooltip" data-placement="top" title="Editar">editar</a>
-      <a href="{{route('pessoa.delete',['id' => $pessoa->id])}}" class="btn btn-danger btn-xs" 
-      data-toggle="tooltip" data-placement="top" title="Apagar">deletar</a>
-    </span>
-    </h3>
+@extends('layout')
+
+@section('content')
+  <div class="col-md-6">
+    <form class="form-horizontal">
+  <div class="form-group">
+    <label for="nome" class="col-sm-2 control-label">Nome</label>
+    <div class="col-sm-10">
+      <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome Completo">
+    </div>
   </div>
-  <div class="panel-body">
-    <h3>{{$pessoa->nome}}</h3>
-      @include('partials.telefones',['telefones' => $pessoa->telefones])
+  <div class="form-group">
+    <label for="apelido" class="col-sm-2 control-label">Apelido</label>
+    <div class="col-sm-10">
+      <input type="text" name="apelido" class="form-control"   placeholder="Apelido">
+    </div>
   </div>
-</div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label>
+          <input type="radio" name="sexo" value="F"> <i>F</i>
+          <input type="radio" name="sexo" value="M"> <i>F</i>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-primary">Salvar</button>
+    </div>
+  </div>
+</form>
+  </div>
+  <div class="col-md-6">
+    @include('partials.contato')
+  </div>
+@endsection
