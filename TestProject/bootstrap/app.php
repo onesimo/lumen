@@ -58,13 +58,11 @@ $app->singleton(
 | route or middleware that'll be assigned to some specific routes.
 |
 */
-Route::group(['middleware' => ['web']], function () {
-    // your routes here
-});
+
 
 $app->middleware([
         
-    	Illuminate\View\Middleware\ShareErrorsFromSession::class
+    	//Illuminate\View\Middleware\ShareErrorsFromSession::class
         //\App\Http\Middleware\VerifyCsrfToken::class,
        // \Illuminate\Routing\Middleware\SubstituteBindings::class,
 ]);

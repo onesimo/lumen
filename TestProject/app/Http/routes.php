@@ -45,6 +45,16 @@ $app->get('/contato/{id}/apagar',[
 	'uses' => 'PessoaController@delete'
 ]);
 
+$app->get('/contato/{id}/editar',[
+	'as' =>'pessoa.edit',
+	'uses' => 'PessoaController@edit'
+]);
+
+$app->put('/contato/{id}',[
+	'as' =>'pessoa.update',
+	'uses' => 'PessoaController@update'
+]);
+
 $app->delete('/contato/{id}',[
 	'as' =>'pessoa.destroy',
 	'uses' => 'PessoaController@destroy'
