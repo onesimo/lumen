@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class TelefonesTable extends Migration
+class CTelT extends Migration
 {
     /**
      * Run the migrations.
@@ -15,11 +15,6 @@ class TelefonesTable extends Migration
     {
         Schema::create('telefones', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('descricao',50);
-            $table->integer('codpais');
-            $table->integer('ddd');
-            $table->integer('prefixo');
-            $table->integer('sufixo');
             $table->timestamps();
         });
     }

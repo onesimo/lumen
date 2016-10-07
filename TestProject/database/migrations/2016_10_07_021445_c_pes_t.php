@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class PessoasTable extends Migration
+class CPesT extends Migration
 {
     /**
      * Run the migrations.
@@ -15,9 +15,6 @@ class PessoasTable extends Migration
     {
         Schema::create('pessoas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nome');
-            $table->string('apelido',50);
-            $table->enum('sexo',['F','M']);
             $table->timestamps();
         });
     }
